@@ -1,6 +1,16 @@
 set nocompatible              " be improved, required
 filetype off                  " required
 
+let shouldInstallPlugin=0
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let shouldInstallPlugin=1
+endif
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -40,6 +50,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+if shouldInstallPlugin == 1
+    echo "Installing Plugins"
+    echo ""
+    :PluginInstall
+endif
 
 " Enable syntax highlight
 syntax on
