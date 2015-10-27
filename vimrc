@@ -60,6 +60,10 @@ endif
 " Enable syntax highlight
 syntax on
 
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
