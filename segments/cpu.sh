@@ -12,8 +12,9 @@ run_segment() {
   if [ -n "$cpu_idle"  ]; then
     p=$(divide_ceil $((100-$cpu_idle)) 10)
     n=$(printf "%.0f" $p)
-    format_segment $(printf '❱%.0s' $(seq 1 $n)) 2
-    format_segment $(printf '❱%.0s' $(seq 1 $((10-$n)))) 0
+    format_print $(printf '%.0s' $(seq 1 $((10-$n)))) 0
+    format_print $(printf '%.0s' $(seq 1 $n)) 2
+    separator
     return 0
   else
     return 1
