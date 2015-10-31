@@ -9,11 +9,12 @@ run_segment() {
     cpu_idle=$(echo "$cpus_line" | awk '{print $5}'  | sed 's/%//' )
   fi
 
-  if [ -n "$cpu_idle"  ]; then
-    p=$(divide_ceil $((100-$cpu_idle)) 10)
-    n=$(printf "%.0f" $p)
-    format_print $(printf '%.0s' $(seq 1 $((10-$n)))) 0
-    format_print $(printf '%.0s' $(seq 1 $n)) 2
+  if [ -n "$cpu_idle" ]; then
+    busy=$(printf "%.0f" $((100-$cpu_idle)))
+    $(divide_ceil $busy 10)
+    p=$?
+    format_print $(printf '%.0s' $(seq 1 $((10-$p)))) 233
+    format_print $(printf '%.0s' $(seq 1 $p)) 2
     separator
     return 0
   else

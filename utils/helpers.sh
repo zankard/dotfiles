@@ -1,9 +1,9 @@
 #!/bin/bash
 format_print() {
   if [[ -n $3 ]]; then
-    echo -n "#[fg=$2 bg=$3]"
+    echo -n "#[fg=colour$2 bg=colour${3}]"
   else
-    echo -n "#[fg=$2]"
+    echo -n "#[fg=colour${2}]"
   fi
   echo -n $1
 }

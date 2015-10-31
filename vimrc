@@ -58,15 +58,12 @@ if shouldInstallPlugin == 1
 endif
 
 " Enable syntax highlight
-syntax on
+syntax enable
 
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 set background=dark
+colorscheme solarized
 
 map <C-n> :NERDTreeTabsToggle<CR>
 " Better comamand completion
@@ -156,3 +153,10 @@ hi VertSplit ctermbg=NONE guibg=NONE
 " Integrate vim-airline with powerline fonts
 let g:airline_powerline_fonts=1
 " let g:airline#extensions#tagbar#enabled=1
+
+" Change cursor style in different mode
+" use orange curosr in insert mode
+if &term =~ "^xterm"
+  let &t_SI = "\<Esc>]12;orange\x7"
+  let &t_SI .= "\<Esc>[4 q"
+endif
