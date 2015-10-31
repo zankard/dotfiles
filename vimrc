@@ -153,6 +153,32 @@ hi VertSplit ctermbg=NONE guibg=NONE
 " Integrate vim-airline with powerline fonts
 let g:airline_powerline_fonts=1
 " let g:airline#extensions#tagbar#enabled=1
+let g:airline#extensions#virtualenv#enabled = 1
+
+function! NerdFiletype()
+  if &filetype =~ 'javascript'
+    return ' ' " \ue74e
+  elseif &filetype =~ 'vim'
+    return ' '
+  elseif &filetype =~ 'html'
+    return ' '
+  elseif &filetype =~ 'java'
+    return ' ' " \ue738
+  elseif &filetype =~ 'python'
+    return ' ' " \ue73c
+  elseif &filetype =~ 'ruby'
+    return ' ' " \ue791
+  else
+    return &filetype
+  endif
+endfunction
+call airline#parts#define_function('nerdfiletype', 'NerdFiletype')
+"call airline#parts#define_accent('nerdfiletype', 'red')
+
+function! AirlineInit()
+  let g:airline_section_x = airline#section#create(['tagbar', 'nerdfiletype'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
 
 " Change cursor style in different mode
 " use orange curosr in insert mode
