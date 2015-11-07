@@ -35,6 +35,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mxw/vim-jsx'
+Plugin 'vcscommand.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -154,6 +156,7 @@ hi VertSplit ctermbg=NONE guibg=NONE
 let g:airline_powerline_fonts=1
 " let g:airline#extensions#tagbar#enabled=1
 let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#branch#use_vcscommand = 0
 
 function! NerdFiletype()
   if &filetype =~ 'javascript'
@@ -168,12 +171,18 @@ function! NerdFiletype()
     return ' ' " \ue73c
   elseif &filetype =~ 'ruby'
     return ' ' " \ue791
-  else
+  elseif &filetype =~ 'dockerfile'
+    return ' ' " \ue7b0
+  elseif &filetype =~ 'scss'
+    return ' ' " \ue74b
+  elseif !empty($filetype)
     return &filetype
+  else
+    return ' '
   endif
 endfunction
 call airline#parts#define_function('nerdfiletype', 'NerdFiletype')
-"call airline#parts#define_accent('nerdfiletype', 'red')
+call airline#parts#define_accent('nerdfiletype', 'red')
 
 function! AirlineInit()
   let g:airline_section_x = airline#section#create(['tagbar', 'nerdfiletype'])
@@ -186,3 +195,11 @@ if &term =~ "^xterm"
   let &t_SI = "\<Esc>]12;orange\x7"
   let &t_SI .= "\<Esc>[4 q"
 endif
+
+let g:jsx_ext_required = 0
+
+" ctrlp key map
+map <F2> :CtrlPMRUFiles<CR>
+
+" wildignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
