@@ -1,0 +1,10 @@
+set visualbell
+set noerrorbells
+set ideajoin
+#set commentary
+set surround
+set easymotion
+set relativenumber
+set NERDTree
+set argtextobj
+set highlightedyank

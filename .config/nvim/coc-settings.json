@@ -1,0 +1,39 @@
+{
+  "diagnostic.displayByAle": false,
+  "vetur.validation.style": false,
+  "suggest.minTriggerInputLength": 1,
+  "vetur.trace.server": "off",
+  "tsserver.trace.server": "off",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python",
+    "java",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
+  "languageserver": {
+    "ccls": {
+      "enable": false,
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  },
+  "java.jdt.ls.home": "/Users/zankard/.config/lsp/jdt.ls",
+  "java.jdt.ls.vmargs": "-javaagent:/Users/zankard/.local/share/lombok/lombok-edge-20201030.034932-1.jar -noverify -Xmx2G -XX:+UseG1GC -XX:+UseStringDeduplication",
+  "java.home": "/Users/zankard/.sdkman/candidates/java/11.0.9.hs-adpt",
+  "java.saveActions.organizeImports": true
+}

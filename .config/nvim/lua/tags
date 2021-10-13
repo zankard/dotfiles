@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/86bdb84/
+0	tsconfig.json	/^        ".\/*"$/;"	s	array:compilerOptions.paths.@/*
+0	tsconfig.json	/^        ".\/*"$/;"	s	array:compilerOptions.paths.~/*
+0	tsconfig.json	/^        ".\/assets\/*"$/;"	s	array:compilerOptions.paths.~assets/*
+0	tsconfig.json	/^      "@types\/node",$/;"	s	array:compilerOptions.types
+0	tsconfig.json	/^      "ESNext",$/;"	s	array:compilerOptions.lib
+0	tsconfig.json	/^    "node_modules",$/;"	s	array:exclude
+1	tsconfig.json	/^      "@nuxt\/types"$/;"	s	array:compilerOptions.types
+1	tsconfig.json	/^      "ESNext.AsyncIterable",$/;"	s	array:compilerOptions.lib
+1	tsconfig.json	/^    ".nuxt",$/;"	s	array:exclude
+2	tsconfig.json	/^      "DOM"$/;"	s	array:compilerOptions.lib
+2	tsconfig.json	/^    "dist"$/;"	s	array:exclude
+@/*	tsconfig.json	/^      "@\/*": [$/;"	a	object:compilerOptions.paths
+M.path	util.lua	/^M.path = (function()$/;"	f
+M.resolve	js-resolve.lua	/^function M.resolve()$/;"	f
+M.root_pattern	util.lua	/^function M.root_pattern(...)$/;"	f
+M.search_ancestors	util.lua	/^function M.search_ancestors(startpath, func)$/;"	f
+allowJs	tsconfig.json	/^    "allowJs": true,$/;"	b	object:compilerOptions
+baseUrl	tsconfig.json	/^    "baseUrl": ".",$/;"	s	object:compilerOptions
+cb	util.lua	/^    local function cb(dir, _)$/;"	f
+compilerOptions	tsconfig.json	/^  "compilerOptions": {$/;"	o
+css_fn	plug-colorizer.lua	/^	  css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn$/;"	f
+dirname	util.lua	/^    dirname = function(path)$/;"	f
+esModuleInterop	tsconfig.json	/^    "esModuleInterop": true,$/;"	b	object:compilerOptions
+exclude	tsconfig.json	/^  "exclude": [$/;"	a
+exists	util.lua	/^  local function exists(filename)$/;"	f
+experimentalDecorators	tsconfig.json	/^    "experimentalDecorators": true,$/;"	b	object:compilerOptions
+hsl_fn	plug-colorizer.lua	/^	  hsl_fn   = true;         -- CSS hsl() and hsla() functions$/;"	f
+is_absolute	util.lua	/^  local function is_absolute(filename)$/;"	f
+is_descendant	util.lua	/^  local function is_descendant(root, path)$/;"	f
+is_dir	util.lua	/^  local function is_dir(filename)$/;"	f
+is_file	util.lua	/^  local function is_file(filename)$/;"	f
+is_fs_root	util.lua	/^    is_fs_root = function(path)$/;"	f
+it	util.lua	/^    local function it(s, v)$/;"	f
+iterate_parents	util.lua	/^  local function iterate_parents(path)$/;"	f
+lib	tsconfig.json	/^    "lib": [$/;"	a	object:compilerOptions
+matcher	util.lua	/^  local function matcher(path)$/;"	f
+module	tsconfig.json	/^    "module": "ESNext",$/;"	s	object:compilerOptions
+moduleResolution	tsconfig.json	/^    "moduleResolution": "Node",$/;"	s	object:compilerOptions
+noEmit	tsconfig.json	/^    "noEmit": true,$/;"	b	object:compilerOptions
+path_join	util.lua	/^  local function path_join(...)$/;"	f
+paths	tsconfig.json	/^    "paths": {$/;"	o	object:compilerOptions
+readfile	js-resolve.lua	/^local function readfile(path)$/;"	f
+rgb_fn	plug-colorizer.lua	/^	  rgb_fn   = true;         -- CSS rgb() and rgba() functions$/;"	f
+sourceMap	tsconfig.json	/^    "sourceMap": true,$/;"	b	object:compilerOptions
+strict	tsconfig.json	/^    "strict": true,$/;"	b	object:compilerOptions
+target	tsconfig.json	/^    "target": "ES2018",$/;"	s	object:compilerOptions
+traverse_parents	util.lua	/^  local function traverse_parents(path, cb)$/;"	f
+types	tsconfig.json	/^    "types": [$/;"	a	object:compilerOptions
+~/*	tsconfig.json	/^      "~\/*": [$/;"	a	object:compilerOptions.paths
+~assets/*	tsconfig.json	/^      "~assets\/*": [$/;"	a	object:compilerOptions.paths
